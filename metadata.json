@@ -1,0 +1,6 @@
+{
+  "name": "WorldDollar.quest",
+  "description": "Your quest to build skills, find opportunities, and earn online — from anywhere.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

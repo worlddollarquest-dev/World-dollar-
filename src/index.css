@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Newsreader', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --color-quest-green: #085536;
+  --color-quest-forest: #053320;
+  --color-quest-emerald: #0E7345;
+  --color-quest-cream: #FDFBF7;
+  --color-quest-warm: #F6F3EB;
+  --color-quest-sand: #EFEAE0;
+  --color-quest-charcoal: #18221D;
+  --color-quest-muted: #5A6B63;
+  --color-quest-gold: #D97706;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FDFBF7;
+  color: #18221D;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Refinements */
+h1, h2, h3, .font-serif-heading {
+  font-family: var(--font-serif);
+  font-feature-settings: "kern" 1, "liga" 1;
+  font-optical-sizing: auto;
+}
+
+/* Subtle Link Underline */
+a.editorial-link {
+  text-decoration: underline;
+  text-decoration-color: rgba(8, 85, 54, 0.25);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s ease, color 0.2s ease;
+}
+
+a.editorial-link:hover {
+  text-decoration-color: rgba(8, 85, 54, 0.9);
+  color: #085536;
+}
+
+/* Smooth Focus States */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #085536;
+  outline-offset: 2px;
+}
+
+/* Card Subtle Lift & Border Transition */
+.quest-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              box-shadow 0.25s ease;
+  will-change: transform, box-shadow;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .quest-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(8, 85, 54, 0.35);
+    box-shadow: 0 10px 25px -5px rgba(24, 34, 29, 0.05), 0 8px 10px -6px rgba(24, 34, 29, 0.03);
+  }
+}
+
+/* Button Subtle Lift */
+.quest-btn-primary {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.2s ease,
+              box-shadow 0.2s ease;
+  will-change: transform, box-shadow;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .quest-btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px -4px rgba(8, 85, 54, 0.25);
+  }
+  .quest-btn-primary:active {
+    transform: translateY(0);
+  }
+}
+
+/* Animated Path Dash Offset for Quest Progress */
+@keyframes questPathDash {
+  from {
+    stroke-dashoffset: 200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-quest-path {
+  stroke-dasharray: 8 6;
+  animation: questPathDash 16s linear infinite;
+}
+
+/* Gentle Traveling Dot */
+@keyframes questTravel {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+/* Reduced Motion Compliance */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .quest-card:hover,
+  .quest-btn-primary:hover {
+    transform: none !important;
+  }
+
+  .animate-quest-path {
+    animation: none !important;
+  }
+}

@@ -1,0 +1,54 @@
+<svg viewBox="0 0 160 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="favGlobe" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stopColor="#34D399" />
+      <stop offset="50%" stopColor="#10B981" />
+      <stop offset="100%" stopColor="#047857" />
+    </radialGradient>
+    <linearGradient id="favContinent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#A7F3D0" />
+      <stop offset="100%" stopColor="#34D399" />
+    </linearGradient>
+    <linearGradient id="favOrbit" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#F59E0B" />
+      <stop offset="50%" stopColor="#FBBF24" />
+      <stop offset="100%" stopColor="#D97706" />
+    </linearGradient>
+    <linearGradient id="favRibbon" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stopColor="#10B981" />
+      <stop offset="60%" stopColor="#059669" />
+      <stop offset="100%" stopColor="#047857" />
+    </linearGradient>
+    <linearGradient id="favHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#34D399" />
+      <stop offset="100%" stopColor="#059669" />
+    </linearGradient>
+    <linearGradient id="favShadow" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stopColor="#064E3B" />
+      <stop offset="100%" stopColor="#022C22" />
+    </linearGradient>
+  </defs>
+
+  <!-- Orbit Behind -->
+  <path d="M 24 58 C 22 45 32 30 52 24 C 70 19 92 24 106 36" stroke="url(#favOrbit)" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.4" />
+
+  <!-- Globe -->
+  <circle cx="68" cy="50" r="36" fill="url(#favGlobe)" />
+  <ellipse cx="68" cy="50" rx="18" ry="35.5" fill="none" stroke="#D1FAE5" stroke-width="1.5" opacity="0.35" />
+  <path d="M 58 30 C 62 26 69 25 76 27 C 82 29 86 33 82 38 C 80 41 84 44 87 45 C 91 46 95 43 97 45 C 99 48 94 54 90 56 C 86 58 84 65 79 69 C 75 72 71 67 69 63 C 67 58 64 56 61 57 C 58 58 57 53 59 48 C 61 44 57 40 56 36 Z" fill="url(#favContinent)" />
+  <path d="M 35 34 C 38 31 43 32 46 36 C 48 40 45 44 43 47 C 41 50 43 55 45 59 C 43 63 38 67 37 62 C 35 56 34 45 35 34 Z" fill="url(#favContinent)" />
+
+  <!-- Foreground Golden Orbit & Arrow -->
+  <path d="M 18 78 C 14 96 38 107 72 98 C 96 92 118 74 130 52 C 134 44 138 34 140 22" stroke="url(#favOrbit)" stroke-width="7" stroke-linecap="round" fill="none" />
+  <path d="M 148 10 L 124 23 L 135 27 L 129 38 L 138 42 L 144 31 L 147 42 Z" fill="url(#favOrbit)" />
+
+  <!-- The 3D Origami Ribbon 'W' -->
+  <path d="M 33 118 L 47 68 L 59 74 L 43 124 Z" fill="url(#favShadow)" />
+  <path d="M 77 122 L 95 62 L 107 68 L 89 126 Z" fill="url(#favShadow)" />
+  <path d="M 19 86 C 16 70 24 57 37 57 C 46 57 52 64 49 76 L 39 116 C 36 126 27 127 22 121 C 17 114 18 98 19 86 Z" fill="url(#favHighlight)" />
+  <path d="M 37 57 C 47 57 57 65 65 82 L 77 106 L 65 116 L 49 76 C 45 68 40 60 37 57 Z" fill="url(#favRibbon)" />
+  <path d="M 65 116 C 71 124 81 123 87 115 L 112 70 C 117 60 125 57 132 64 C 137 70 135 79 128 90 L 105 125 C 96 137 80 138 68 126 L 65 116 Z" fill="url(#favRibbon)" />
+  <path d="M 112 70 L 100 92 L 87 115 L 75 92 L 92 61 C 99 50 110 50 118 56 C 124 61 121 68 112 70 Z" fill="url(#favHighlight)" />
+  <path d="M 23 75 C 25 63 32 58 37 58 C 42 58 46 64 44 72" stroke="#A7F3D0" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.75" />
+  <path d="M 94 62 C 100 52 108 51 115 57 C 120 62 118 68 112 70" stroke="#A7F3D0" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.75" />
+</svg>
